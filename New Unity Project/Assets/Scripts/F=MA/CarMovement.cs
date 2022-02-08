@@ -65,6 +65,7 @@ public class CarMovement : MonoBehaviour
 
     public void Update() {
         isPlayingStatic = isPlaying;
+        //test
     }
 }
 
