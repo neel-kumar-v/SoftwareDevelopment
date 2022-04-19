@@ -13,11 +13,6 @@ public class SetCurrent : MonoBehaviour
     [SerializeField] private AnimationCurve curve;
     public float current;
 
-    public void Start() {
-        SliderValChange();
-    }
-
-    
     public void SliderValChange() {
         current = NormalizeSliderValue(slider.value);
         text1.text = "The current is <b>" + current.ToString("#.00") + "</b>";
@@ -35,5 +30,6 @@ public class SetCurrent : MonoBehaviour
 
     public void Update() {
         text1.text = "The current is <b>" + current.ToString("#.00") + "</b>";
+        SliderValChange();
     }
 }

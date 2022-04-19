@@ -32,6 +32,10 @@ public class OhmsGM : MonoBehaviour
 
     private float resistance;
 
+    public bool changed1 = false;
+    public bool changed2 = false;
+    public bool changed3 = false;
+
     public void Start()
     {
         slider1.interactable = true; // The user can only change the gravity once the sim has started
@@ -54,19 +58,19 @@ public class OhmsGM : MonoBehaviour
     public void Check() {
          if (slider1.value > 0 && slider2.value > 0) {
             current = (slider1.GetComponent<SetVoltage>().voltage / slider2.GetComponent<SetResistance>().resistance);
-            Debug.Log(current);
-            text6.text = "The Current is <b>" + (current).ToString("#.00") + "</b>";
+            Debug.Log("A:" + current);
+            text6.text = "The Current is <b>" + (current).ToString("#.000") + "</b>";
             text7.text = "I = <b>" + (current).ToString("#.00") + "</b>";
             slider3.value = (current);
         } else if (slider1.value > 0 && slider3.value > 0) {
             resistance = (slider1.GetComponent<SetVoltage>().voltage / slider3.GetComponent<SetCurrent>().current);
-            Debug.Log(resistance);
+            Debug.Log("B:" + resistance);
             text4.text = "The Resistance is <b>" + (resistance).ToString("#.00") + "</b>";
             text5.text = "R = <b>" + (resistance).ToString("#.00") + "</b>";
             slider2.value = (resistance);
         } else if (slider2.value > 0 && slider3.value > 0) {
             voltage = (slider2.GetComponent<SetResistance>().resistance * slider3.GetComponent<SetCurrent>().current);
-            Debug.Log(voltage);
+            Debug.Log("C:" + voltage);
             text2.text = "The Voltage is <b>" + (voltage).ToString("#.00") + "</b>";
             text3.text = "V = <b>" + (voltage).ToString("#.00") + "</b>";
             slider1.value = (voltage);

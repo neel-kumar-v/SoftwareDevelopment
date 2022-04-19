@@ -12,10 +12,6 @@ public class SetResistance : MonoBehaviour
     // This curve is what makes the slider go from 0.1 - 1 in the first half and 1 - 10 in the second half
     [SerializeField] private AnimationCurve curve;
     public float resistance;
-
-    public void Start() {
-        SliderValChange();
-    }
     
     public void SliderValChange() {
         resistance = NormalizeSliderValue(slider.value);
@@ -34,5 +30,6 @@ public class SetResistance : MonoBehaviour
 
     public void Update() {
         text1.text = "The resistance is <b>" + resistance.ToString("#.00") + "</b>";
+        SliderValChange();
     }
 }

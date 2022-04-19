@@ -12,11 +12,6 @@ public class SetVoltage : MonoBehaviour
     // This curve is what makes the slider go from 0.1 - 1 in the first half and 1 - 10 in the second half
     [SerializeField] private AnimationCurve curve;
     public float voltage;
-
-    public void Start() {
-        SliderValChange();
-    }
-
     
     public void SliderValChange() {
         voltage = NormalizeSliderValue(slider.value);
@@ -35,5 +30,6 @@ public class SetVoltage : MonoBehaviour
 
     public void Update() {
         text1.text = "The Voltage is <b>" + voltage.ToString("#.00") + "</b>";
+        SliderValChange();
     }
 }
