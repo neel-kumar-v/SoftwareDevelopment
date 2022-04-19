@@ -24,18 +24,15 @@ public class HoverSelect : MonoBehaviour
         isHovered = false;
     }
 
-    void OnMouseDown() {
+    public void OnMouseDown() {
         isSelected = true;
-    }
-    void OnMouseUp() {
-        isSelected = false;
     }
 
     void Update() {
         if(isSelected) {
-            Destroy(gameObject);
-            transform.position = MousePosition.GetMousePosition(gameObject);
+            if(GetComponent<Clicks>().ready == true) {
+                transform.position = GetComponent<Clicks>().clickPosition;
+            }
         }
     }
-
 }
