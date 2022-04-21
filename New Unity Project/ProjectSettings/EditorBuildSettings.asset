@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Projectile.unity
     guid: add092eb5df3e7940b18741102d703c9
+  - enabled: 1
+    path: Assets/Scenes/Magnetism.unity
+    guid: 60a500de3b247004fa000d2282dc7299
+  - enabled: 1
+    path: Assets/Scenes/OhmsLaw.unity
+    guid: 34fcbfbf6affd4f489e0f3febc5e258b
   m_configObjects: {}
