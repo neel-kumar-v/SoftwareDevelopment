@@ -531,19 +531,11 @@ RectTransform:
   m_Father: {fileID: 299520340}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -40, y: 32}
-  m_SizeDelta: {x: 114.4169, y: 56.13098}
-  m_Pivot: {x: 1, y: 0}
-=======
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 114.4169, y: 56.131}
   m_Pivot: {x: 1, y: 1}
->>>>>>> Stashed changes
 --- !u!114 &423379231
 MonoBehaviour:
   m_ObjectHideFlags: 0
