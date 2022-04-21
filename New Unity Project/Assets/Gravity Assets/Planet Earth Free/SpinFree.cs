@@ -18,6 +18,10 @@ public class SpinFree : MonoBehaviour {
 	[HideInInspector]
 	public float directionChangeSpeed = 2f;
 
+	public void ChangeSpeed(float sped) {
+		speed = sped;
+	}
+
 	// Update is called once per frame
 	void Update() {
 		if (direction < 1f) {
