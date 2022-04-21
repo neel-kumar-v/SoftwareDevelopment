@@ -22,9 +22,8 @@ public class SetCharge : MonoBehaviour
 
     
     public void SliderValChange() {
-        chargeMultiplier = NormalizeSliderValue(slider.value);
-        text.text = "The square's mass is currently <b>" + chargeMultiplier.ToString("#.00") + "</b>";
-        rb.GetComponent<ChargedParticle>().charge = UpdateSquareCharge(chargeMultiplier);
+        chargeMultiplier = slider.value;
+        text.text = chargeMultiplier.ToString("#.00");
     }
 
     public float UpdateSquareCharge(float add) {

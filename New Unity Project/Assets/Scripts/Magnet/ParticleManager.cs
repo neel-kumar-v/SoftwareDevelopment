@@ -10,14 +10,17 @@ public class ParticleManager : MonoBehaviour
     private List<MovingChargedParticle> movingChargedParticles;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        chargedParticles = new List<ChargedParticle> (FindObjectsOfType<ChargedParticle> ());
-        movingChargedParticles = new List<MovingChargedParticle> (FindObjectsOfType<MovingChargedParticle> ());
-
+        FindMovingParticles();
         foreach(MovingChargedParticle mcp in movingChargedParticles) {
             StartCoroutine (Cycle (mcp));
         }
+    }
+
+    public void FindMovingParticles() {
+        chargedParticles = new List<ChargedParticle> (FindObjectsOfType<ChargedParticle> ());
+        movingChargedParticles = new List<MovingChargedParticle> (FindObjectsOfType<MovingChargedParticle> ());
     }
 
     public IEnumerator Cycle(MovingChargedParticle mcp) {

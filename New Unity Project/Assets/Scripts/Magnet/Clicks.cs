@@ -22,7 +22,6 @@ public class Clicks : MonoBehaviour
 
         if(mouseClicks >= 3f) {
             clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0f, 0f, 5f));
-            Debug.Log(clickPosition);
             ready = true;
         }
         }

@@ -14,4 +14,8 @@ public class ChargedParticle : MonoBehaviour
         Color color = charge > 0 ? Color.green : Color.red;
         GetComponent<Renderer>().material.color = color;
     }
+
+    public void SetCharge(float newCharge) {
+        charge = newCharge;
+    }
 }

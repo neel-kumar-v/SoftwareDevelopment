@@ -7,11 +7,18 @@ public class HoverSelect : MonoBehaviour
     public float hoverMetallic;
     private Renderer rend;
     private float startMetallic;
-    public bool isHovered;
-    public bool isSelected;
+    [HideInInspector] public bool isHovered;
+    [HideInInspector] public bool isSelected;
+    public static bool switched;
+    public bool isSwitched;
+
+
+
+    public MousePosition mousePosition;
 
     public void Start() {
         rend = GetComponent<Renderer>();
+        mousePosition = GameObject.FindObjectOfType<MousePosition>();
         startMetallic = rend.material.GetFloat("_Metallic");
     }
 
@@ -27,12 +34,15 @@ public class HoverSelect : MonoBehaviour
     public void OnMouseDown() {
         isSelected = true;
     }
+    public void OnMouseUp() {
+        isSelected = false;
+    }
 
     void Update() {
-        if(isSelected) {
-            if(GetComponent<Clicks>().ready == true) {
-                transform.position = GetComponent<Clicks>().clickPosition;
-            }
+        if(isSelected && isSwitched) {
+            // if(GetComponent<Clicks>().ready == true) {
+            transform.position = mousePosition.GetMousePosition(gameObject, true);
+            // }
         }
     }
 }

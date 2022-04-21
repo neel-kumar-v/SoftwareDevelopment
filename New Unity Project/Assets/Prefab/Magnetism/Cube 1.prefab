@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 1971547380376992844}
   - component: {fileID: 1971547380376992843}
   - component: {fileID: 1971547380376992847}
-  - component: {fileID: 199523685}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube 1
   m_TagString: Square
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971547380376992841}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.682438, y: 1.386486, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -127,20 +126,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &199523685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971547380376992841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acf406b28b2a36e43972e90e6133b2c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverMetallic: 0
-  isHovered: 0
-  isSelected: 0
-  isSwitched: 0
-  mousePosition: {fileID: 0}
